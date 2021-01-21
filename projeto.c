@@ -31,7 +31,7 @@ void menuSobre(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///            = = = = = Banco = = = = =                ///\n");
+    printf("///            = = = = = Banco 02 = = = = =                ///\n");
     printf("///                                                                         ///\n");
     printf("///  Programa exemplo utilizado na disciplina DCT1106 - Programação, para   ///\n");
     printf("///  fins didáticos de ilustração. O programa consiste em um pragama que    ///\n");
