@@ -1,10 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
-///             Universidade Federal do Rio Grande do Norte                 ///
-///                 Centro de Ensino Superior do Seridó                     ///
-///               Departamento de Computação e Tecnologia                   ///
-///                  Disciplina DCT1106 -- Programação                      ///
-///                  Projeto Sistema de Gestão Escolar                      ///
-///                Developed by  @flgorgonio - Jan, 2021                    ///
+///  Projeto de Pedro Henrique Guedes Brito.                                ///
+///  aluno de progamação DCT1106 - T01                                      ///
+///  Projeto focado na simulação de uma gestão Bancária onde criarei um     ///
+///  algoritmo cujo seu objetivo será o cadastramento de contas, tanto de   ///
+///  pessoas fisicas como pessoas juridicas.                                ///
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
@@ -21,24 +20,24 @@ int main(void) {
 void menuSobre(void) {
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Seridó                     ///\n");
-    printf("///               Departamento de Computação e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programação                      ///\n");
-    printf("///                  Projeto Sistema de Gestão Escolar                      ///\n");
-    printf("///                Developed by  @flgorgonio - Jan, 2021                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///            = = = = = Banco 02 = = = = =                ///\n");
-    printf("///                                                                         ///\n");
-    printf("///  Programa exemplo utilizado na disciplina DCT1106 - Programação, para   ///\n");
-    printf("///  fins didáticos de ilustração. O programa consiste em um pragama que    ///\n");
-    printf("///  como objetivo de simular o que seria o gerenciamento real de contas    ///\n");
-    printf("///  bancárias.                                                             ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
+    printf("///                                                                          ///\n");
+    printf("///             Universidade Federal do Rio Grande do Norte                  ///\n");
+    printf("///             Centro de Ensino Superior do Seridó                          ///\n");
+    printf("///             Departamento de Computação e Tecnologia                      ///\n");
+    printf("///             Disciplina DCT1106 -- Programação                            ///\n");
+    printf("///             Projeto Sitema de controle de contas Bancárias               ///\n");
+    printf("///             Developed by  @pedro_.guedes - Jan, 2021                        ///\n");
+    printf("///                                                                          ///\n");
+    printf("////////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                          ///\n");
+    printf("///          = = =  Um Sistema de Controle de Contas Bancárias = = =         ///\n");
+    printf("///                                                                          ///\n");
+    printf("///        Bom dia! Me chamo Pedro Henrique Guedes Brito, sou estudante      ///\n");
+    printf("///        Da disciplina de progamação ministrada pelo professor Flavius     ///\n");
+    printf("///        DCT1106 - T01. Meu projeto a priori foi pensado a fim de criar    ///\n");
+    printf("///        um algoritmo que imita a realidade bancária no que diz respeito   ///\n");
+    printf("///        a criação de conta em um banco.                                   ///\n");
+    printf("///                                                                          ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 }
