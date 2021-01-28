@@ -14,6 +14,7 @@
 void menuPrincipal(void);
 void menuSobre(void);
 void deposito(void);
+void tranferencia(void);
 
 //função principal//
 
@@ -108,6 +109,40 @@ void deposito(void); {
 	printf("///           2. Pesquisar Depósito                                       ///\n");
 	printf("///           3. Alterar Dados do Depósito                                ///\n");
 	printf("///           4. Excluir Depósito                                         ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+void transferencia(void); {
+
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Menu Tranferencia = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Cadastrar Transferencia                                  ///\n");
+	printf("///           2. Pesquisar Transferencia                                  ///\n");
+	printf("///           3. Alterar Dados da Transferencia                           ///\n");
+	printf("///           4. Excluir Transferencia                                    ///\n");
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
