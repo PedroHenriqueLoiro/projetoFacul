@@ -14,13 +14,18 @@
 void menuPrincipal(void);
 void menuSobre(void);
 void deposito(void);
-void tranferencia(void);
+void transferencia(void);
 void pagamentos(void);
 
 //função principal//
 
 int main(void) {
-    menuSobre();
+  	 menuSobre();
+  	 menuPrincipal();
+	 deposito();
+	 transferencia();
+	 pagamentos();
+
     return 0;
 
 }
@@ -53,7 +58,7 @@ void menuSobre(void) {
     printf("\n");
 }
 
-void menuPrincipal(void); {
+void menuPrincipal(void){
 system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -86,7 +91,7 @@ system("clear");
 	getchar();
 }
 
-void deposito(void); {
+void deposito(void){
 
     system("clear");
 	printf("\n");
@@ -120,7 +125,7 @@ void deposito(void); {
 	getchar();
 }
 
-void transferencia(void); {
+void transferencia(void){
 
     system("clear");
 	printf("\n");
@@ -154,7 +159,7 @@ void transferencia(void); {
 	getchar();
 }
 
-void pagamentos(void); {
+void pagamentos(void){
 system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
