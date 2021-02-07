@@ -11,22 +11,25 @@
 
 // assinatura das funções //
 
-void menuPrincipal(void);
+char menuPrincipal(void);
 void menuSobre(void);
 void deposito(void);
 void transferencia(void);
 void pagamentos(void);
+void cadastrarDeposito(void);
 
 //função principal//
 
 int main(void) {
-  	 menuSobre();
-  	 menuPrincipal();
-	 deposito();
-	 transferencia();
-	 pagamentos();
+  char opcao;
 
-    return 0;
+    menuSobre();
+    opcao = menuPrincipal();
+	  opcao = deposito();
+	  opcao = transferencia();
+	  opcao = pagamentos();
+
+  return 0;
 
 }
 
@@ -42,7 +45,7 @@ void menuSobre(void) {
     printf("///             Departamento de Computação e Tecnologia                      ///\n");
     printf("///             Disciplina DCT1106 -- Programação                            ///\n");
     printf("///             Projeto Sitema de controle de contas Bancárias               ///\n");
-    printf("///             Developed by  @pedro_.guedes - Jan, 2021                        ///\n");
+    printf("///             Developed by  @pedro_.guedes - Jan, 2021                     ///\n");
     printf("///                                                                          ///\n");
     printf("////////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                          ///\n");
@@ -58,7 +61,8 @@ void menuSobre(void) {
     printf("\n");
 }
 
-void menuPrincipal(void){
+char menuPrincipal(void){
+  char op;
 system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -83,16 +87,19 @@ system("clear");
 	printf("///           0. Encerra o programa                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
+  scanf("%c", &op);
+  getchar();                                                         
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+  return op;
 }
 
 void deposito(void){
-
+  char op;
     system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -117,6 +124,8 @@ void deposito(void){
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
+  scanf("%c", &op);
+  getchar();                                                         
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -124,6 +133,7 @@ void deposito(void){
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
+
 
 void transferencia(void){
 
@@ -190,5 +200,49 @@ system("clear");
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+
+}
+
+void cadastrarDeposito(void){
+  char nome[51];
+  char cpf[16];
+  char numeroBanco[4];
+  char agencia[5];
+  system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Cadastro do Deposito  = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+  printf("///           Nome completo: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+  getchar();
+  printf("///           Informe o CPF(apenas números): ");
+	scanf("%[0-9]", cpf);
+	getchar(); 
+  printf("///          Informe o Número do banco(apenas números): ");
+	scanf("%[0-9]", numeroBanco);
+	getchar();
+  printf("///          Agência Bancária (apenas números): ");
+	scanf("%[0-9]", agencia);
+	getchar();
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+
 
 }
