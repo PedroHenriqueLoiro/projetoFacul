@@ -10,13 +10,23 @@
 #include <stdlib.h>
 
 // assinatura das funções //
-
+//menus 
 char menuPrincipal(void);
 void menuSobre(void);
+
+//deposito
 void deposito(void);
+char cadastrarDeposito(void);
+void historicoDeposito(void);
+
+//tranferencia
 void transferencia(void);
+char cadastrarTranferencia(void);
+
+
 void pagamentos(void);
-void cadastrarDeposito(void);
+
+
 
 //função principal//
 
@@ -24,10 +34,10 @@ int main(void) {
   char opcao;
 
     menuSobre();
+    deposito();
+	  transferencia();
+	  pagamentos();
     opcao = menuPrincipal();
-	  opcao = deposito();
-	  opcao = transferencia();
-	  opcao = pagamentos();
 
   return 0;
 
@@ -93,7 +103,7 @@ system("clear");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+  printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
   return op;
 }
@@ -119,8 +129,7 @@ void deposito(void){
 	printf("///                                                                       ///\n");
 	printf("///           1. Cadastrar Depósito                                       ///\n");
 	printf("///           2. Historico de Depósitos                                   ///\n");
-	printf("///           3. Alterar Dados do Depósito                                ///\n");
-	printf("///           4. Excluir Depósito                                         ///\n");
+	printf("///           3. Excluir Depósito                                         ///\n");
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
@@ -203,11 +212,12 @@ system("clear");
 
 }
 
-void cadastrarDeposito(void){
+char cadastrarDeposito(void){
   char nome[51];
   char cpf[16];
   char numeroBanco[4];
   char agencia[5];
+  char confirmacao[4];
   system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -237,6 +247,42 @@ void cadastrarDeposito(void){
   printf("///          Agência Bancária (apenas números): ");
 	scanf("%[0-9]", agencia);
 	getchar();
+  printf("As informações informadas estão correstas?");
+  scanf("%[SIMNAOÃsimnaoã]", confirmacao);
+  getchar();
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+void historicoDepoisto(void){
+system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///          = = = = = = = = Histori de Depositos = = = = = = =           ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -244,5 +290,65 @@ void cadastrarDeposito(void){
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 
-
 }
+
+char cadastrarTranferencia(void){
+  char nome[51];
+  char cpf[16];
+  char cnpj[13];
+  char numeroBanco[4];
+  char agencia[5];
+  char contaBancaria[7];
+  char confirmacao[4];
+  char decisao[4];
+  char resposta[4];
+  system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = =  Cadastrar Tranferencia = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	  printf("///           Nome completo do Beneficiario: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+  getchar();
+  switch (resposta){
+  case "sim";
+   prinf("Digite seu cpf");
+   scanf("%[0-9]", decisao);
+   break;
+  case "não"
+   prinf("Digite seu CNPJ");
+   scanf("%[0-9]", decisao);
+   break;
+  }
+
+	getchar();
+    printf("///          Informe o Número do banco(apenas números): ");
+	scanf("%[0-9]", numeroBanco);
+	getchar();
+    printf("///          Agência Bancária (apenas números): ");
+	scanf("%[0-9]", agencia);
+	getchar();
+    printf("///          Cotan Bancária (apenas números): ");
+	scanf("%[0-9]", contaBancaria);
+	getchar();
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
