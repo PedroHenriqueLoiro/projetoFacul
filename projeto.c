@@ -97,13 +97,13 @@ system("clear");
 	printf("///           0. Encerra o programa                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
-  scanf("%c", &op);
-  getchar();                                                         
+	scanf("%c", &op);
+	getchar();                                                         
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
-  printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
   return op;
 }
@@ -133,8 +133,8 @@ void deposito(void){
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
-  scanf("%c", &op);
-  getchar();                                                         
+	scanf("%c", &op);
+	getchar();                                                         
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -235,21 +235,21 @@ char cadastrarDeposito(void){
 	printf("///           = = = = = = = = Cadastro do Deposito  = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
-  printf("///           Nome completo: ");
+	printf("///           Nome completo: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
-  getchar();
-  printf("///           Informe o CPF(apenas números): ");
+	getchar();
+	printf("///           Informe o CPF(apenas números): ");
 	scanf("%[0-9]", cpf);
 	getchar(); 
-  printf("///          Informe o Número do banco(apenas números): ");
+	printf("///          Informe o Número do banco(apenas números): ");
 	scanf("%[0-9]", numeroBanco);
 	getchar();
-  printf("///          Agência Bancária (apenas números): ");
+	printf("///          Agência Bancária (apenas números): ");
 	scanf("%[0-9]", agencia);
 	getchar();
-  printf("As informações informadas estão correstas?");
-  scanf("%[SIMNAOÃsimnaoã]", confirmacao);
-  getchar();
+	printf("As informações informadas estão correstas?");
+	scanf("%[SIMNAOÃsimnaoã]", confirmacao);
+	getchar();
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -301,7 +301,7 @@ char cadastrarTranferencia(void){
   char contaBancaria[7];
   char confirmacao[4];
   char decisao[4];
-  char resposta[4];
+  int resposta;
   system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -319,28 +319,29 @@ char cadastrarTranferencia(void){
 	printf("///           = = = = = = =  Cadastrar Tranferencia = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
-	  printf("///           Nome completo do Beneficiario: ");
+	printf("///           Nome completo do Beneficiario: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
-  getchar();
-  switch (resposta){
-  case "sim";
-   prinf("Digite seu cpf");
-   scanf("%[0-9]", decisao);
-   break;
-  case "não"
-   prinf("Digite seu CNPJ");
-   scanf("%[0-9]", decisao);
-   break;
-  }
-
-	getchar();
-    printf("///          Informe o Número do banco(apenas números): ");
+  	getchar();
+	printf("Se vc for pessoa juridica digite (1) se vc for pessoa fisica Dgite (2)");
+ 	scanf("%d", & resposta);
+  	switch (resposta){
+  	case 2:
+    printf("Digite seu cpf");
+    scanf("%[0-9]", decisao);
+    break;
+    case 1:
+    printf("Digite seu CNPJ");
+    scanf("%[0-9]", decisao);
+    break;
+    }
+  	getchar();
+	printf("///          Informe o Número do banco(apenas números): ");
 	scanf("%[0-9]", numeroBanco);
 	getchar();
-    printf("///          Agência Bancária (apenas números): ");
+  	printf("///          Agência Bancária (apenas números): ");
 	scanf("%[0-9]", agencia);
 	getchar();
-    printf("///          Cotan Bancária (apenas números): ");
+ 	printf("///          Cotan Bancária (apenas números): ");
 	scanf("%[0-9]", contaBancaria);
 	getchar();
 	printf("///                                                                       ///\n");
@@ -348,7 +349,7 @@ char cadastrarTranferencia(void){
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+ 	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
 
