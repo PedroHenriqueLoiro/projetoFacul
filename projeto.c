@@ -23,6 +23,9 @@ void historicoDeposito(void);
 void transferencia(void);
 char cadastrarTranferencia(void);
 
+//saques
+void telaSaque(void);
+
 
 void pagamentos(void);
 
@@ -32,15 +35,21 @@ void pagamentos(void);
 
 int main(void) {
   char opcao;
-
-    menuSobre();
-    deposito();
-	  transferencia();
-	  pagamentos();
-    opcao = menuPrincipal();
+  do{
+        opcao = menuPrincipal();
+    switch(opcao){
+    case '1': deposito();
+      break;
+    case '2': transferencia();
+      break;
+    case '3': telaSaque();
+      break;
+	  case '4': pagamentos();
+    break;
+    }
+  }while (opcao != '0');
 
   return 0;
-
 }
 
 
@@ -177,6 +186,40 @@ void transferencia(void){
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
+
+void telaSaque(void){
+  system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = =    Menu Saques    = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Realizar Saque                                           ///\n");
+	printf("///           2. Pesquisar sobre Pagamentos                               ///\n");
+	printf("///           3. Alterar Dados Sobre o Pagamento                          ///\n");
+	printf("///           4. Excluir Pagamentos                                       ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
 
 void pagamentos(void){
 system("clear");
