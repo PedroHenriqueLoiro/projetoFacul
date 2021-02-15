@@ -119,6 +119,7 @@ system("clear");
 
 void deposito(void){
   char op;
+  char opcao;
     system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -143,17 +144,27 @@ void deposito(void){
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
 	scanf("%c", &op);
-	getchar();                                                         
+	getchar();  
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
-	printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-	getchar();
+	printf("\nEscolha a opção (apenas numeros): ");
+  getchar();
+  do{
+    switch(opcao);
+    case '1': cadastrarDeposito();
+      break;
+    case "2": histDeposito();
+      break;
+    case "3": excluirDeposito();  
+      break;
+    }
+}while (opcao != '0');
 }
 
 
 void transferencia(void){
+  char opcao;
 
     system("clear");
 	printf("\n");
@@ -174,9 +185,7 @@ void transferencia(void){
 	printf("///                                                                       ///\n");
 	printf("///           1. Cadastrar Transferencia                                  ///\n");
 	printf("///           2. Historico de  Transferencias                             ///\n");
-	printf("///           3. Alterar Dados da Transferencia                           ///\n");
-	printf("///           4. Excluir Historico de Transferencias                      ///\n");
-	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///           3. Excluir Historico de Transferencias                      ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
 	printf("///                                                                       ///\n");
@@ -185,9 +194,19 @@ void transferencia(void){
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+   do{
+    switch(opcao);
+    case "1": cadastrarTranferencia();
+      break;
+    case "2": histTranferencia();
+      break;
+
+    }
+}while (opcao != '0');
 }
 
 void telaSaque(void){
+  char opcao;
   system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -218,10 +237,22 @@ void telaSaque(void){
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+   do{
+    switch(opcao);
+    case "1": cadastrarDeposito();
+      break;
+    case "2": histDeposito();
+      break;
+    case "3": excluirDeposito();  
+      break;
+    }
+}while (opcao != '0');
 }
 
 
+
 void pagamentos(void){
+  char opcao;
 system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -241,8 +272,7 @@ system("clear");
 	printf("///                                                                       ///\n");
 	printf("///           1. Cadastrar Pagamentos                                     ///\n");
 	printf("///           2. Pesquisar sobre Pagamentos                               ///\n");
-	printf("///           3. Alterar Dados Sobre o Pagamento                          ///\n");
-	printf("///           4. Excluir Pagamentos                                       ///\n");
+	printf("///           3. Excluir Historico de Pagamentos                          ///\n");
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Escolha a opção desejada:                                   ///\n");
@@ -252,6 +282,16 @@ system("clear");
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+   do{
+    switch(opcao);
+    case "1": cadastrarPagamento();
+      break;
+    case "2": histPagamento();
+      break;
+    case "3": excluirHistPagamento();  
+      break;
+    }
+}while (opcao != '0');
 
 }
 
