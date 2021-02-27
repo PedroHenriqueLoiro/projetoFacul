@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "assinaturaFuncoes.h"
+#include <stdlib.h>
 //
 /// Essa função é responsavel por mostrar a tela referente às tranferencias bancarias
 //
@@ -7,7 +8,7 @@
 void transferencia(void){
   char opcao;
 
-    system("clear");
+    system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -36,11 +37,11 @@ void transferencia(void){
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
    do{
-    switch(opcao);
-    case "1": cadastrarTranferencia();
+    switch(opcao){
+    case '1': cadastrarTranferencia();
       break;
-    case "2": histTranferencia();
-      break;
+    // case '2': histTranferencia();
+    //  break;
 
     }
 }while (opcao != '0');
@@ -59,7 +60,7 @@ char cadastrarTranferencia(void){
   char confirmacao[4];
   char decisao[4];
   int resposta;
-  system("clear");
+  system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -79,26 +80,26 @@ char cadastrarTranferencia(void){
 	printf("///           Nome completo do Beneficiario: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
   	getchar();
-	printf("Se vc for pessoa juridica digite (1) se vc for pessoa fisica Dgite (2)");
- 	scanf("%d", & resposta);
+	printf("Se vc for pessoa pessoa fisica Dgite (1) Caso seja pessoa Jurica Digite (2):");
+ 	scanf("%d", &resposta);
   	switch (resposta){
-  	case 2:
-    printf("Digite seu cpf");
+  	case 1:
+    printf("Digite seu cpf:");
     scanf("%[0-9]", decisao);
     break;
-    case 1:
-    printf("Digite seu CNPJ");
+    case 2:
+    printf("Digite seu CNPJ:");
     scanf("%[0-9]", decisao);
     break;
     }
   	getchar();
-	printf("///          Informe o Número do banco(apenas números): ");
+	printf("///          Informe o Numero do banco(apenas números): ");
 	scanf("%[0-9]", numeroBanco);
 	getchar();
-  	printf("///          Agência Bancária (apenas números): ");
+  	printf("///          Agência Bancaria (apenas números): ");
 	scanf("%[0-9]", agencia);
 	getchar();
- 	printf("///          Cotan Bancária (apenas números): ");
+ 	printf("///          Conta Bancaria (apenas números): ");
 	scanf("%[0-9]", contaBancaria);
 	getchar();
 	printf("///                                                                       ///\n");

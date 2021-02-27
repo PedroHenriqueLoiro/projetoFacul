@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "assinaturaFuncoes.h"
+#include <stdlib.h>
 //
 ///Essa função é responsavel por mostrar a tela referente aos depositos
 //
 void deposito(void){
   char op;
   char opcao;
-    system("clear");
+    system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -20,30 +21,30 @@ void deposito(void){
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-	printf("///           = = = = = = = = Menu Depósito = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Menu Deposito = = = = = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
-	printf("///           1. Cadastrar Depósito                                       ///\n");
-	printf("///           2. Historico de Depósitos                                   ///\n");
-	printf("///           3. Excluir Depósito                                         ///\n");
+	printf("///           1. Cadastrar Deposito                                       ///\n");
+	printf("///           2. Historico de Depositos                                   ///\n");
+	printf("///           3. Excluir Deposito                                         ///\n");
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
-	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///           Escolha a opcao desejada:                                   ///\n");
 	scanf("%c", &op);
 	getchar();  
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
-	printf("\nEscolha a opção (apenas numeros): ");
+	printf("\nEscolha a opcao (apenas numeros): ");
   getchar();
   do{
-    switch(opcao);
+    switch(opcao){
     case '1': cadastrarDeposito();
       break;
-    case "2": histDeposito();
+    case '2': histDeposito();
       break;
-    case "3": excluirDeposito();  
-      break;
+    // case '3': excluirDeposito();  
+    //   break;
     }
 }while (opcao != '0');
 }
@@ -58,7 +59,7 @@ char cadastrarDeposito(void){
   char numeroBanco[4];
   char agencia[5];
   char confirmacao[4];
-  system("clear");
+  system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -78,16 +79,16 @@ char cadastrarDeposito(void){
 	printf("///           Nome completo: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
 	getchar();
-	printf("///           Informe o CPF(apenas números): ");
+	printf("///           Informe o CPF(apenas numeros): ");
 	scanf("%[0-9]", cpf);
 	getchar(); 
-	printf("///          Informe o Número do banco(apenas números): ");
+	printf("///          Informe o Numero do banco(apenas numeros): ");
 	scanf("%[0-9]", numeroBanco);
 	getchar();
-	printf("///          Agência Bancária (apenas números): ");
+	printf("///          Agencia Bancaria (apenas numeros): ");
 	scanf("%[0-9]", agencia);
 	getchar();
-	printf("As informações informadas estão correstas?");
+	printf("As informacoes informadas estao correstas?");
 	scanf("%[SIMNAOÃsimnaoã]", confirmacao);
 	getchar();
 	printf("///                                                                       ///\n");
@@ -102,8 +103,8 @@ char cadastrarDeposito(void){
 /// FUnção responsavel por mostrar o historico de deposito
 //
 
-void historicoDepoisto(void){
-system("clear");
+void histDeposito(void){
+system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -117,7 +118,7 @@ system("clear");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-	printf("///          = = = = = = = = Histori de Depositos = = = = = = =           ///\n");
+	printf("///          = = = = = = = Historico de Depositos = = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");

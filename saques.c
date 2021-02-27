@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "assinaturaFuncoes.h"
+#include <stdlib.h>
 //
 /// Tela que mostra as opções em respeito aos saques
 //
 void telaSaque(void){
   char opcao;
-  system("clear");
+  system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -36,13 +37,13 @@ void telaSaque(void){
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
    do{
-    switch(opcao);
-    case "1": cadastrarDeposito();
+    switch(opcao){
+    case '1': cadastrarDeposito();
       break;
-    case "2": histDeposito();
+    case '2': histDeposito();
       break;
-    case "3": excluirDeposito();  
-      break;
+    // case '3': excluirDeposito();  
+    //   break;
     }
 }while (opcao != '0');
 }

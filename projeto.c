@@ -23,7 +23,7 @@ int main(void) {
     case '3': telaSaque();
       break;
 	  case '4': pagamentos();
-    break;
+      break;
     }
   }while (opcao != '0');
 
