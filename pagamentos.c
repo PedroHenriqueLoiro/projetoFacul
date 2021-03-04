@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "assinaturaFuncoes.h"
+#include "pagamentos.h"
 #include <stdlib.h>
 //
 /// Função que mostra a tela em respeito aos pagamentos
@@ -114,7 +114,7 @@ system("CLS");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
-	printf("///          = = = = = = = Historico de Depositos = = = = = =             ///\n");
+	printf("///          = = = = = = = Historico de Pagamentos  = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");

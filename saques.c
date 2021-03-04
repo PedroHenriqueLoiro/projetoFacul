@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "assinaturaFuncoes.h"
+#include "saques.h"
 #include <stdlib.h>
 //
 /// Tela que mostra as opções em respeito aos saques
@@ -38,7 +38,7 @@ void telaSaque(void){
     switch(opcao){
     case '1': realizarSaque();
       break;
-    case '2': histDeposito();
+    case '2': extrato();
       break;
     }
 }while (opcao != '0');
@@ -85,6 +85,42 @@ char realizarSaque(void){
 	getchar();
 	return 0;
     }
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+//
+/// Extrato dos pagamentos
+//
+void extrato(void){
+system("CLS");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///          = = = = = = = Historico de Pagamentos  = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");

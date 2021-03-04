@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "assinaturaFuncoes.h"
+#include "transferencia.h"
 #include <stdlib.h>
 //
 /// Essa função é responsavel por mostrar a tela referente às tranferencias bancarias
@@ -38,9 +38,9 @@ void transferencia(void){
 	getchar();
    do{
     switch(opcao){
-    case '1': cadastrarTranferencia();
+    case '1': cadastrarTransferencia();
       break;
-    case '2': histTranferencia();
+    case '2': histTransferencia();
      break;
 
     }
@@ -50,7 +50,7 @@ void transferencia(void){
 //
 /// Função responsavel cadastrar a tranferencia
 //
-char cadastrarTranferencia(void){
+char cadastrarTransferencia(void){
   char nome[51];
   char cpf[16];
   char cnpj[13];
@@ -111,7 +111,7 @@ char cadastrarTranferencia(void){
 	getchar();
 }
 
-void histTranferencia(void){
+void histTransferencia(void){
 	system("CLS");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");

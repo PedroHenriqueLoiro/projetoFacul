@@ -8,7 +8,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "assinaturaFuncoes.h"
+#include "deposito.h"
+#include "menuSobre.h"
+#include "pagamentos.h"
+#include "saques.h"
+#include "transferencia.h"
 
 //função principal//
 int main(void) {
