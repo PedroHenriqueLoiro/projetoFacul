@@ -11,11 +11,13 @@ void histDeposito(void);
 //tranferencia
 void transferencia(void);
 char cadastrarTranferencia(void);
-// void histTranferencia(void);
+void histTranferencia(void);
 
 //saques
 void telaSaque(void);
+char realizarSaque(void);
 
 //pagamento
-// char cadastrarPagamento(void);
+char cadastrarPagamento(void);
 void pagamentos(void);
+void histPagamento(void);

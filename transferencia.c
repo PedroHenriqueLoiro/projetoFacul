@@ -40,8 +40,8 @@ void transferencia(void){
     switch(opcao){
     case '1': cadastrarTranferencia();
       break;
-    // case '2': histTranferencia();
-    //  break;
+    case '2': histTranferencia();
+     break;
 
     }
 }while (opcao != '0');
@@ -78,29 +78,29 @@ char cadastrarTranferencia(void){
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
 	printf("///           Nome completo do Beneficiario: ");
-	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+	scanf("%c[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
   	getchar();
 	printf("Se vc for pessoa pessoa fisica Dgite (1) Caso seja pessoa Jurica Digite (2):");
  	scanf("%d", &resposta);
   	switch (resposta){
   	case 1:
     printf("Digite seu cpf:");
-    scanf("%[0-9]", decisao);
+    scanf("%c[0-9]", decisao);
     break;
     case 2:
     printf("Digite seu CNPJ:");
-    scanf("%[0-9]", decisao);
+    scanf("%c[0-9]", decisao);
     break;
     }
   	getchar();
 	printf("///          Informe o Numero do banco(apenas números): ");
-	scanf("%[0-9]", numeroBanco);
+	scanf("%c[0-9]", numeroBanco);
 	getchar();
   	printf("///          Agência Bancaria (apenas números): ");
-	scanf("%[0-9]", agencia);
+	scanf("%c[0-9]", agencia);
 	getchar();
  	printf("///          Conta Bancaria (apenas números): ");
-	scanf("%[0-9]", contaBancaria);
+	scanf("%c[0-9]", contaBancaria);
 	getchar();
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
@@ -110,3 +110,38 @@ char cadastrarTranferencia(void){
  	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
 }
+
+void histTranferencia(void){
+	system("CLS");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =           Banco Mundial             = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @pedro_.guedes - Jan, 2021               ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = Historico de Transferencias = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+
+}
+
