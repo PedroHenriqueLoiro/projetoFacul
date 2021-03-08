@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "deposito.h"
 #include <stdlib.h>
+#include "deposito.h"
 //
 ///Essa função é responsavel por mostrar a tela referente aos depositos
 //
@@ -53,7 +53,7 @@ void deposito(void){
 
 char cadastrarDeposito(void){
   char nome[51];
-  char cpf[16];
+  char cpf[15];
   char numeroBanco[4];
   char agencia[5];
   char confirmacao[4];
